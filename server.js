@@ -12,7 +12,7 @@ router.get('/vault-3ds', async (req, res, next) => {
   
   const accessToken = await getAccessToken()
   
-  const url = 'https://api-m.paypal.comg/v2/checkout/orders'
+  const url = 'https://api-m.paypal.com/v2/checkout/orders'
   
   const option = {
     headers: {
