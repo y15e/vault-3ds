@@ -8,6 +8,12 @@ const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PORT = 8080 } = process.env;
 
 const router = express.Router()
 
+app.set('views', path.join(__dirname, 'views'))
+
+router.get('/', async (req, res, next) => {
+  res.render('index')
+})
+
 router.get('/vault-3ds', async (req, res, next) => {
   
   const accessToken = await getAccessToken()
