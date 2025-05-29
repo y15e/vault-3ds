@@ -10,6 +10,8 @@ const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PORT = 8080 } = process.env;
 const router = express.Router()
 
 app.set('views', '/opt/render/project/src/views')
+app.set('view options', { layout: false })
+app.set('view engine', 'hbs')
 
 router.get('/', async (req, res, next) => {
   res.render('index')
